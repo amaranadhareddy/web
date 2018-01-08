@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Layout</title>
+<style>
+	body{
+		width:80%;
+		margin:0 auto;
+	}
+	header,footer{
+		background: -webkit-linear-gradient(left,green,#87cef1,yellow,#87cef1,green);/*chrome specific*/
+		background: -moz-linear-gradient(left,green,#87cef1,yellow,#87cef1,green);/*mozilla specific*/
+		background: -ms-linear-gradient(left,green,#87cef1,yellow,#87cef1,green);/*microsoft specific*/
+		background: linear-gradient(to left,green,#87cef1,yellow,#87cef1,green);/*not specific*/
+		text-align:center;
+	}
+	header span{
+		font-family: cursive;
+		font-size: 48px;
+		font-variant: small-caps;
+		text-shadow: 5px 5px 5px gray;
+		-webkit-text-shadow: 5px 5px 5px gray;
+		-moz-text-shadow: 5px 5px 5px gray;
+		-ms-text-shadow: 5px 5px 5px gray;
+		color: blue;
+	}
+	section{
+		min-height:600px;
+		display: flex;
+	}
+	article{
+		width:80%;
+		text-align: justify;
+		padding: 10px;
+	}
+	article h2{
+		text-align:center;
+	}
+	article div{
+		text-indent: 50px;
+	}
+	aside{
+		border:1px solid red;
+	}
+	aside div{
+		background: -webkit-radial-gradient(red,yellow,green);
+		height:100px;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<span>Sapient Technologies</span>
+	</header>
+	<section>
+		<article>
+			<h2>Article1</h2>
+			<div>loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum
+			loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum 
+			loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum
+			loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum 
+			loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum
+			loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum loren ipsum</div>
+		</article>
+		<aside>
+			<img alt="" src="images/computer3.jpg"/>
+			<div id="adv">
+				Great offers
+			</div>
+		</aside>
+	</section>
+	<footer>
+		&copy; copyrights reserved 2018
+	</footer>
+</body>
+</html>

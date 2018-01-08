@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sub Menu</title>
+<style>
+	h1{
+		text-align:center;
+		color:blue;
+		font-variant: small-caps;
+	}
+	#menu{
+		list-style:none;
+	}
+	#menu li{
+		float:left;
+		margin:10px;
+	}
+	#menu a{
+		text-decoration: none;
+		background-color: orange;
+		color: white;
+		padding: 10px;
+	}
+	#menu a:hover{
+		background-color: red;
+	}
+	#menu li:hover #sub{
+		display:block;
+	}
+	#sub{
+		position:absolute;
+		display:none;
+		list-style:none;
+	}
+	#sub li{
+		clear:both;
+	}
+	#sub a{
+		background-color:blue;
+	}
+</style>
+</head>
+<body>
+	<h1>menu and its submenu</h1>
+	<hr />
+	<ul id="menu">
+		<li><a href="">menu1</a></li>
+		<li><a href="">menu2</a>
+			<ul id="sub">
+				<li><a href="">sub menu1</a></li>
+				<li><a href="">sub menu2</a></li>
+				<li><a href="">sub menu3</a></li>
+				<li><a href="">sub menu4</a></li>
+			</ul>
+		</li>
+		<li><a href="">menu4</a></li>
+		<li><a href="">menu3</a></li>
+	</ul>
+</body>
+</html>
