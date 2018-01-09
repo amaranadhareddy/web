@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+#div1{
+  width: 140px;
+  height:200px;
+  border: 1px solid red;
+  
+}
+</style>
+<script>
+   var arr = ["chennai", "calicut", "chandigarh","badarpur","bangalore", 
+              "bhopal","ambala","allahabad", "amethi"];
+   
+   function display(str){
+	 
+	  var res = "";
+	  if(str.length > 0)
+	  for(var idx in arr){
+		  if(str == arr[idx].substring(0, str.length))
+			  res += "<div onclick='populate(this.innerHTML)'>" +arr[idx]+ "</div>" ;
+	  }
+	  document.getElementById("div1").innerHTML = res;
+   }
+   
+   function populate(str){
+	   document.getElementById("txt1").innerHTML = str;
+   }
+
+</script>
+</head>
+<body>
+<h1>Suggestion Demo</h1>
+<hr/>
+<div align="center">
+<input type="text" id="txt1" onkeyup="display(this.value)"/>
+<div id="div1"></div>
+</div>
+</body>
+</html>
