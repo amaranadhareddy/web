@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function display(){
+	document.getElementById("tname").innerHTML="";
+	document.getElementById("tsal").innerHTML="";
+	document.getElementById("tdept").innerHTML="";
+	
+	var key = document.getElementById("txteid").value;
+	
+	if(localStorage.getItem(key) != null){
+		var json = JSON.parse(localStorage.getItem(key));
+		document.getElementById("tname").innerHTML=json.ename;
+		document.getElementById("tsal").innerHTML=json.esal;
+		document.getElementById("tdept").innerHTML=json.edept;
+	} 
+}
+</script>
+</head>
+<body>
+	<h1>View from storage</h1>
+	<hr/>
+	<div align="center">
+	Enter EID<input type="text" id ="txteid"/>
+	<input type="button" value="search" onclick="display()"/>
+	<table cellpadding="10" bgcolor="cornsilk">
+		<tr>
+			<td>Name</td>
+			<td id="tname" width="50"></td>
+		</tr>
+		<tr>
+			<td>Salary</td>
+			<td id="tsal"></td>
+		</tr>
+		<tr>
+			<td>Dept</td>
+			<td id="tdept"></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

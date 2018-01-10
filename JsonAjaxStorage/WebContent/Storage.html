@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+var curridx = 0;
+function displayTable(){
+	var res = "";
+	if(localStorage.length > 0){
+		for(var idx = 0; idx < localStorage.length; ++idx){
+			var json = JSON.parse(localStorage.getItem("emp"+idx));
+			res += "<tr>";
+			res += "<td>" + json.ename + "</td>";
+			res += "<td>" + json.esal + "</td>";
+			res += "<td>" + json.edept + "</td>";
+			res += "</tr>";
+		}
+		document.getElementById("t1").innerHTML = res;
+		
+	}
+	
+}
+
+function save(){
+	var name = document.getElementById("txtname").value;
+	var sal = document.getElementById("txtsal").value;
+	var dept = document.getElementById("txtdept").value;
+	
+	var json = {ename: name, esal: sal, edept: dept};
+	var jstr = JSON.stringify(json);
+	curridx = localStorage.length;
+	localStorage.setItem("emp"+curridx, jstr);
+	var elem = document.createElement("tr");
+	var inner = "<td>" + name + "</td>";
+	inner +=  "<td>" + sal + "</td>";
+	inner +=  "<td>" + dept + "</td>";
+	elem.innerHTML = inner;
+	var tbody = document.getElementById("t1");
+	tbody.append(elem);
+	
+}
+</script>
+</head>
+<body onload="displayTable()">
+	<h1>Storage Demo</h1>
+	<hr />
+	<table cellpadding="10" bgcolor="#wheat" style="margin: 0 auto;">
+		<tr>
+			<td>name</td>
+			<td><input type="text" id="txtname" /></td>
+		</tr>
+		<tr>
+			<td>salary</td>
+			<td><input type="text" id="txtsal" /></td>
+		</tr>
+		<tr>
+			<td>dept</td>
+			<td><select id="txtdept">
+					<option value="hr">hr</option>
+					<option value="pr">pr</option>
+					<option value="qa">qa</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="add" onclick="save()" />
+			<td><input type="button" value="display all" onclick="display()" />
+		</tr>
+
+	</table>
+	<hr size="2" style="background-color: red" />
+	<div id="div1">
+		<table cellpadding="10" bgcolor="cornsilk" style="margin: 0 auto;">
+			<tr bgcolor="aqua">
+				<th>Name</th>
+				<th>Salary</th>
+				<th>Department</th>
+			</tr>
+			<tbody id="t1">
+
+			</tbody>
+		</table>
+	</div>
+
+	<table>
+
+	</table>
+</body>
+</html>
