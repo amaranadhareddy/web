@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>FirstApp</display-name>
+  <welcome-file-list>
+    <welcome-file>Home.jsp</welcome-file>
+    
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>mytax</servlet-name>
+    <servlet-class>com.sapient.web.TaxServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mytax</servlet-name>
+    <url-pattern>/tax</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>myeligible</servlet-name>
+    <servlet-class>com.sapient.web.EligibleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myeligible</servlet-name>
+    <url-pattern>/eligible</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>myquiz</servlet-name>
+    <servlet-class>com.sapient.web.QuizServlet</servlet-class>
+    <init-param>
+    	<param-name>passper</param-name>
+    	<param-value>25</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myquiz</servlet-name>
+    <url-pattern>/quiz</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  	<param-name>headstr</param-name>
+  	<param-value>powered by sapient technologies</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>homepg</param-name>
+  	<param-value>Home.jsp</param-value>
+  </context-param>
+</web-app>
