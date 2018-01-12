@@ -8,11 +8,7 @@
 </head>
 <body>
 	<h1 align="center">Update your skills</h1>
-	<div align="center">
-	${initParam.headstr}<br/>
-	<a href="${initParam.homepg}">Home</a>
-</div>
-	<hr />
+	<%@include file="Header.jsp" %>
 	<form action="SkillResult.jsp">
 		<table cellpadding="10" bgcolor="wheat" style="margin: 0 auto">
 			<tr>

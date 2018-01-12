@@ -8,11 +8,7 @@
 </head>
 <body>
 	<h1 align="center">Play Java Quiz</h1>
-	<div align="center">
-	${initParam.headstr}<br/>
-	<a href="${initParam.homepg}">Home</a>
-</div>
-	<hr />
+	<%@include file="Header.jsp" %>
 	<form action="QuizResult.jsp" method="post">
 		<div style="width: 40%; background-color: aqua; margin: 0 auto;">
 			1.size of int type<br />

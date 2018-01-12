@@ -8,10 +8,7 @@
 </head>
 <body>
 <h1 align="center">Tax Calculation</h1>
-<div align="center">
-	${initParam.headstr}<br/>
-	<a href="${initParam.homepg}">Home</a>
-</div>
+<%@include file="Header.jsp" %>
 <form action="TaxResult.jsp">
 	<table cellpadding="10" bgcolor="wheat" style="margin:0 auto">
 	<tr>

@@ -25,11 +25,7 @@
 	<c:set var="per" value="${score /4.0 *100 }"/>
 
 <h1 align="center">Quiz Result</h1>
-<div align="center">
-	${initParam.headstr}<br/>
-	<a href="${initParam.homepg}">Home</a>
-</div>
-<hr/>
+<%@include file="Header.jsp" %>
 	<table cellpadding="10" bgcolor="wheat" style="margin:0 auto">
 	<tr>
 		<td>No of questions answered correct</td>

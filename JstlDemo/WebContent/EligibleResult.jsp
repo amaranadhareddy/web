@@ -26,11 +26,7 @@
 	</c:if>
 
 <h1 align="center">Eligible result</h1>
-<div align="center">
-    ${initParam.headstr}<br/>
-	<a href="${initParam.homepg}">Home</a>
-</div>
-<hr/>
+<%@include file="Header.jsp" %>
 	<table cellpadding="10" bgcolor="wheat" style="margin:0 auto">
 	<tr>
 		<td>Employee Name</td>

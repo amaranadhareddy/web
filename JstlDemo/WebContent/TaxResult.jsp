@@ -22,9 +22,7 @@
 	</c:choose>
 	
 	<h1 align="center">Tax Result</h1>
-	<div align="center">
-		${initParam.headstr}<br /> <a href="${initParam.homepg}">Home</a>
-	</div>
+	<%@include file="Header.jsp" %>
 
 	<table cellpadding="10" bgcolor="wheat" style="margin: 0 auto">
 		<tr>
