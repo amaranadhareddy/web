@@ -40,6 +40,9 @@
 	<tr>
 		<td><a href="EligibleFrm.jsp">Eligible for JAVA developer</a></td>
 	</tr>
+	<tr>
+		<td><a href="downmx">Download mx form</a></td>
+	</tr>
 </table>
 </body>
 </html>
