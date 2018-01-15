@@ -6,11 +6,12 @@
 <head>
 
 <title>Insert title here</title>
-<link href="sapient.css" rel="stylesheet" />
+<link href="quiz.css" rel="stylesheet" />
 </head>
 <body>
 	<%@include file="Header.jsp"%>
 	<section>
+	    <h2>Instructions and guide to take Test</h2>
 		<div>
 			<ul>
 				<li>no need to answer all the questions</li>
@@ -19,7 +20,7 @@
 				<li>After clicking on finish button cannot go back to previous
 					questions</li>
 			</ul>
-			<a href="start">Start Exam</a>
+			<nav><a href="start">Start Exam</a></nav>
 		</div>
 	</section>
 	<%@include file="Footer.jsp"%>
