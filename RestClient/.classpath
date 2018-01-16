@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/aopalliance-repackaged-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/asm-debug-all-5.0.2.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/hk2-api-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/hk2-locator-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/hk2-utils-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/javax.inject-2.3.0-b10.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jaxb-api-2.2.7.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-client.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-common.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-core-1.9.1.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-guava-2.13.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-media-multipart-2.13.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/jersey-server.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/json_simple-1.1.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/mimepull.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/org.osgi.core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/persistence-api-1.0.jar"/>
+	<classpathentry kind="lib" path="//GIVSARDIN46607/Shared folder/jars/jersey/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
