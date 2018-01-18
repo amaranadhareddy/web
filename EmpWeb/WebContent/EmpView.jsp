@@ -44,7 +44,7 @@ table div {
 		<tbody>
 			<c:forEach items="${emplist}" var="e">
 				<tr>
-					<td><img src="photos/${e.empId}.jpg" /></td>
+					<td><img src="viewimg?iname=${e.empId}" /></td>
 					<td>${e.empId}</td>
 					<td>${e.empName}</td>
 					<td>${e.sal}</td>
@@ -57,11 +57,12 @@ table div {
 								<fieldset>
 
 									Emp ID ${e.empId}<br /> <br /> Salary <input type="text"
-										name="txtxsal" /><br /> <br /> <input type="hidden"
-										name="hideid" value="${e.empId}" />
-										<input type="hidden" name="pgid" value="${pgno}"/>
-										 <input type="submit"
-										value="update" /></td>
+										name="txtsal" /><br /> <br /> <input type="hidden"
+										name="hideid" value="${e.empId}" /> <input type="hidden"
+										name="pgid" value="${pgno}" /> <input type="hidden"
+										name="requri"
+										value="${pageContext.request.requestURI}?${pageContext.request.queryString}" />
+									<input type="submit" value="update" /></td>
 					</fieldset>
 					</form>
 					</div>

@@ -38,6 +38,7 @@ public class EmpViewController extends HttpServlet {
 		ServletContext ctx = getServletContext();
 		List<Emp> lst = dao.viewEmployee();
 		ctx.setAttribute("elist", lst);
+		ctx.setAttribute("dlist",dao.getDepts());
 	}
 
 
@@ -57,7 +58,9 @@ public class EmpViewController extends HttpServlet {
 		case "/EmpWeb/update":
 			view = updateEmp(request);
 			break;
-			
+		case "/EmpWeb/viewbydept": 
+			view = viewByDept(request);
+			break;
 		}
 		rd = request.getRequestDispatcher(response.encodeURL(view));
 		rd.forward(request, response);
@@ -70,6 +73,15 @@ public class EmpViewController extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	private String viewByDept(HttpServletRequest request){
+		int did = Integer.parseInt(request.getParameter("txtdid"));
+		List<Emp> lst = dao.viewEmployeeByDept(did);
+		request.setAttribute("emplist", lst);
+		return "EmpView.jsp";
+	}
+	
+	
 	
 	private String viewAll(HttpServletRequest request){
 		String strpg = request.getParameter("pg");
@@ -95,8 +107,18 @@ public class EmpViewController extends HttpServlet {
 	private String updateEmp(ServletRequest request){
 		int eid = Integer.parseInt(request.getParameter("hideid"));
 		double sal = Double.parseDouble(request.getParameter("txtsal"));
+		String view =null;
+		int pgno = 1;
+		
+		if(request.getParameter("requri").startsWith("txtdid"))
+			view = "viewbydept?" + request.getParameter("requri");
+		else{
+			pgno= Integer.parseInt(request.getParameter("pgid"));
+			view = "viewall?pg="+pgno;
+		}
+		
+	
 		ServletContext ctx = getServletContext();
-		int pgno = Integer.parseInt(request.getParameter("pgid"));
 		try{
 			dao.updateEmployee(eid, sal);
 			request.setAttribute("msg", "employye salary for "+ eid + " is updated");
@@ -105,7 +127,8 @@ public class EmpViewController extends HttpServlet {
 			request.setAttribute("msg", "employee salary not updated");
 			e.printStackTrace();
 		}
-		return "viewall?pg="+pgno;
+		
+		return view;
 	}
 
 }

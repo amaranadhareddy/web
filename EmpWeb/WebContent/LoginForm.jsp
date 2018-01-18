@@ -9,30 +9,19 @@
 </head>
 <body>
 <%@include file="Header.jsp" %>
-<c:if test="${sessionScope.semp == null}">
-	<jsp:forward page="LoginFrm.jsp">
-		<jsp:param value="please login" name="login"/>
-	</jsp:forward>
-
-</c:if>
-<section id="home">
-	<h2>Home Page</h2>
-	<h3>${msg}</h3>
-	<div>
-		<nav>
-		<table>
-			<tr>
-				<td><a href="viewall">View All Employees</a></td>
-				<td><a href="DeptView.jsp">View Department</a></td>
-			</tr>
-			<tr>
-				<td><a href="addEmpFrm.jsp">Add Employee</a></td>
-			</tr>
-		</table>
-		</nav>
-	</div>
+<section>
+<h2>Login Form</h2>
+<div>
+<%--Include additional code for login validation --%>
+	<fieldset>
+		<pre>
+			User Id<input type="text" name="txtid"/>
+			Password<input type="password" name="txtpass"/>
+				<input type="submit" value="login"/>
+		</pre> 
+	</fieldset>
+</div>
 </section>
-
 <%@include file="Footer.jsp" %>
 </body>
 </html>
